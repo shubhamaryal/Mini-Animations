@@ -1,0 +1,1 @@
+Animation of images using Clip-Patha on Scroll.
