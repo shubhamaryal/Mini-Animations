@@ -1,0 +1,1 @@
+Animation of Navbar and a Smooth Loading page.
