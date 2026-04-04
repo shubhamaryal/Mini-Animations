@@ -7,7 +7,7 @@ const totalImg = element.length;
 
 let oldMousePosition = { x: 0, y: 0 };
 let newMousePosition = { x: 0, y: 0 };
-const MIN_DISTANCE = 5 * (96 / 2.54);
+const MIN_DISTANCE = 3.5 * (96 / 2.54);
 
 window.addEventListener("mousemove", (e) => {
     newMousePosition = {
@@ -27,12 +27,13 @@ const calculation = (newMousePosition, totalImg) => {
     if (travelDistance >= MIN_DISTANCE) {
         const el = element[count];
 
+        // This resets each element's initial state before animating it. Else the animation will not work.
         gsap.set(el, {
             opacity: 0,
             scale: 0,
             y: 0,
             rotation: 0,
-        }); // This resets each element's initial state before animating it.
+        });
 
         el.style.left = `${newMousePosition.x}px`;
         el.style.top = `${newMousePosition.y}px`;

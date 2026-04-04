@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.3rem;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+}
+
+.container:last-child {
+    border-bottom: none;
+}
+
+.container img.swipeimage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
